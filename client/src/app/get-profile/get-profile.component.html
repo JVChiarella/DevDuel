@@ -1,0 +1,18 @@
+<div class = "user-table">
+    <div>
+        <img class="image" src= {{profilePicLink}}>
+    </div>
+
+    <div class = "user-text-block">
+        <ng-container *ngFor="let entry of profileEntries">
+            <div class= "row-container">
+                <div class="row-name">
+                    {{entry}}
+                </div>
+                <div class="row-data">
+                    {{userProfile[entry]}}
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

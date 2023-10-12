@@ -1,0 +1,49 @@
+.user-table{
+    height: 440px;
+    width: 590px;
+    display: block; 
+    margin: auto;
+    border: 5px solid #111827;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.user-text-block{
+    color: #111827;
+    padding-top: 20px;
+}
+
+.image {
+    border: 5px solid #111827;
+    display: flex;
+    margin-top: 160px;
+    margin-left: 30px;
+    margin-bottom: 180px;
+    margin-right: 30px;
+    float: left;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.row-container{
+    display: flex;
+}
+
+.row-name{
+    display: block;
+    width: 200px;
+    height: 25px;
+    background: #E1F1FF;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.row-data{
+    font-size: 25px;
+    text-align: left;
+}

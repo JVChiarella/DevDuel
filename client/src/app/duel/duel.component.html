@@ -1,0 +1,38 @@
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+  "
+>
+  <div style="display: flex; flex-direction: row">
+    <app-text-input
+      (usernameChange)="receiveUsernameOne($event)"
+    ></app-text-input>
+    <p style="margin: 2vh 20px">VS</p>
+    <app-text-input
+      (usernameChange)="receiveUsernameTwo($event)"
+    ></app-text-input>
+  </div>
+  <br />
+  <br />
+  <button class="submit-button" (click)="onSubmit()">Duel</button>
+</div>
+
+<div *ngIf="winnerPicked" class="winner-text">
+  <div *ngIf="user1Wins" class="user1-wins">
+    WINNER
+  </div>
+
+  <div *ngIf="user2Wins" class="user2-wins">
+    WINNER
+  </div>
+</div>
+
+<app-get-profile *ngIf="dataReceived" [userProfile] = "userData1" style= "float: left; margin-left: 200px;">
+</app-get-profile>
+
+<app-get-profile *ngIf="dataReceived" [userProfile] = "userData2" style= "float: right; margin-right: 200px">
+</app-get-profile>
+
