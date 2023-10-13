@@ -22,6 +22,7 @@ export class InspectComponent implements OnInit {
   }
 
   async onSubmit() {
+    this.dataReceived = false;
     this.userData = await this.userService.inspectUser(this.username);
     this.dataReceived = true;
   }

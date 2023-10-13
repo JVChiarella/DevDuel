@@ -16,10 +16,9 @@ export class DuelComponent implements OnInit {
   userData2 : any;
 
   winnerPicked : boolean = false;
+  winner: String = "";
   user1Points : number = 0;
   user2Points : number = 0;
-  user1Wins : boolean = false;
-  user2Wins : boolean = false;
 
   constructor(private userService: UserService) { }
 
@@ -55,8 +54,7 @@ export class DuelComponent implements OnInit {
     //1 point for most stars, highest starred, public repos, perfect repos and followers
 
     //reset vars if page isnt refreshed between calls
-    this.user1Wins = false;
-    this.user2Wins = false;
+    this.winner = "";
     this.user1Points = 0;
     this.user2Points = 0;
 
@@ -71,15 +69,15 @@ export class DuelComponent implements OnInit {
     }
 
     if(this.user1Points > this.user2Points){
-      this.user1Wins = true;
+      this.winner = "user1";
     } else if(this.user1Points < this.user2Points) {
-      this.user2Wins = true;
+      this.winner = "user2";
     } else {
       //randomly pick winner in tie case
       if(Math.round(Math.random()) == 0){
-        this.user1Wins = true;
+        this.winner = "user1";
       } else {
-        this.user2Wins = true;
+        this.winner = "user2";
       }
     }
 
